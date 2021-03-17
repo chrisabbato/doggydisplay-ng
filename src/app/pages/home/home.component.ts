@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { DoggyApiService } from '../shared/doggy-api.service';
+import { DoggyApiService } from '../../core/doggy-api.service';
 
 @Component({
   selector: 'app-home',

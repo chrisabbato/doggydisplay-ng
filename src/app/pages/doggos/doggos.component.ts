@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { DoggyApiService } from '../shared/doggy-api.service';
-import { Image } from '../shared/image.model';
+import { DoggyApiService } from '../../core/doggy-api.service';
+import { Image } from '../../shared/image.model';
 
 @Component({
   selector: 'app-doggos',

@@ -1,0 +1,11 @@
+<div class="search-input">
+  <mat-form-field>
+    <mat-label>Choose a Breed</mat-label>
+    <input
+      matInput
+      placeholder="Ex. Husky"
+      #searchValue
+      (input)="search(searchValue.value)"
+    />
+  </mat-form-field>
+</div>

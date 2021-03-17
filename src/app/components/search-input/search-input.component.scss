@@ -1,0 +1,11 @@
+.search-input {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+mat-form-field {
+  font-size: 16px;
+}

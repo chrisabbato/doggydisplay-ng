@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.breed-search-results {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 10px;
+}
