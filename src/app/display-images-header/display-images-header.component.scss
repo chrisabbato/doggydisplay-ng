@@ -1,0 +1,11 @@
+.heading {
+  display: flex;
+  .left,
+  .right {
+    flex: 1;
+  }
+}
+h2 {
+  align-self: center;
+  text-align: center;
+}

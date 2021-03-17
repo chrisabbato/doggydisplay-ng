@@ -1,0 +1,11 @@
+<div class="images">
+  <ng-container *ngIf="images$ | async as images; else indicator">
+    <mat-card *ngFor="let image of images">
+      <img [src]="image.url" [alt]="image.alt" />
+    </mat-card>
+  </ng-container>
+
+  <ng-template #indicator>
+    <mat-spinner color="accent"></mat-spinner>
+  </ng-template>
+</div>
