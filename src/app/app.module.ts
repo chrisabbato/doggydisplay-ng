@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { DoggosComponent } from './doggos/doggos.component';
 import { DisplayImagesComponent } from './display-images/display-images.component';
 import { DisplayImagesHeaderComponent } from './display-images-header/display-images-header.component';
+import { SearchInputComponent } from './search-input/search-input.component';
+import { DisplayListComponent } from './display-list/display-list.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { DisplayImagesHeaderComponent } from './display-images-header/display-im
     DoggosComponent,
     DisplayImagesComponent,
     DisplayImagesHeaderComponent,
+    SearchInputComponent,
+    DisplayListComponent,
   ],
   imports: [
     BrowserModule,
