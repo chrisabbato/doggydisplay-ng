@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { filter } from 'rxjs/operators';
 import { DoggyApiService } from '../shared/doggy-api.service';
 
 @Component({
