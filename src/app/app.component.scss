@@ -1,5 +1,11 @@
+mat-toolbar {
+  display: flex;
+  flex-direction: row;
+  place-content: center space-between;
+}
+
 a {
-  color: #EEE;
+  color: #eee;
   text-decoration: none;
   outline: none;
 }
