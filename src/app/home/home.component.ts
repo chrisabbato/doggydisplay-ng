@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { filter } from 'rxjs/operators';
 import { DoggyApiService } from '../shared/doggy-api.service';
 
 @Component({
@@ -9,7 +11,7 @@ import { DoggyApiService } from '../shared/doggy-api.service';
 export class HomeComponent implements OnInit {
   title = 'Home';
   breeds: string[] = [];
-  filteredBreeds: string[] = [];
+  filteredBreeds$: Observable<string[]> | undefined;
 
   constructor(public doggyApi: DoggyApiService) {}
 
@@ -20,13 +22,15 @@ export class HomeComponent implements OnInit {
   LoadBreeds() {
     return this.doggyApi.getBreeds().subscribe((data) => {
       this.breeds = Array.from(Object.keys((data as any).message));
-      this.filteredBreeds = this.breeds;
+      this.filteredBreeds$ = of(this.breeds);
     });
   }
 
   filterBreeds(searchValue: string) {
-    this.filteredBreeds = this.breeds.filter((breed) =>
+    const filtered = this.breeds.filter((breed) =>
       breed.toLowerCase().includes(searchValue.toLowerCase())
     );
+
+    this.filteredBreeds$ = of(filtered);
   }
 }

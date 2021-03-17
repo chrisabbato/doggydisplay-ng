@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable, of } from 'rxjs';
 import { DoggyApiService } from '../shared/doggy-api.service';
 
 @Component({
@@ -9,13 +10,15 @@ import { DoggyApiService } from '../shared/doggy-api.service';
 })
 export class DoggosComponent implements OnInit {
   breed: string = '';
-  images:
-    | [
-        {
-          url: URL;
-          alt: string;
-        }
-      ]
+  images$:
+    | Observable<
+        [
+          {
+            url: URL;
+            alt: string;
+          }
+        ]
+      >
     | undefined;
 
   constructor(
@@ -36,11 +39,11 @@ export class DoggosComponent implements OnInit {
       const images = (data as any).message.map((image: URL, index: number) => {
         return {
           url: image,
-          alt: `Random ${this.breed} #${index}`,
+          alt: `Random ${this.breed} #${++index}`,
         };
       });
 
-      this.images = images;
+      this.images$ = of(images);
     });
   }
 }

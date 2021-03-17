@@ -11,12 +11,17 @@
     </mat-form-field>
   </div>
   <div class="breed-search-results">
-    <a
-      [routerLink]="['/doggos', breed]"
-      *ngFor="let breed of filteredBreeds"
-      mat-raised-button
-    >
-      {{ breed | titlecase }}
-    </a>
+    <ng-container *ngIf="filteredBreeds$ | async as breeds; else indicator">
+      <a
+        [routerLink]="['/doggos', breed]"
+        *ngFor="let breed of breeds"
+        mat-raised-button
+      >
+        {{ breed | titlecase }}
+      </a>
+    </ng-container>
+    <ng-template #indicator>
+      <mat-spinner color="accent"></mat-spinner>
+    </ng-template>
   </div>
 </div>
