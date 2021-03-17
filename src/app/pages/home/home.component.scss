@@ -1,7 +1,11 @@
 :host {
   display: flex;
-  justify-content: center;
+  place-items: center center;
   flex-direction: column;
+}
+
+app-search-input {
+  margin-bottom: 30px;
 }
 
 .breed-search-results {
