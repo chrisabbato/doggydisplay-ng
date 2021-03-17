@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { DoggyApiService } from '../../core/doggy-api.service';
+import { DoggyApiService } from '../../core/services/doggy-api.service';
 import { Image } from '../../shared/image.model';
 
 @Component({
