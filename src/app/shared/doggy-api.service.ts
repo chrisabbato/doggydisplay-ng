@@ -17,6 +17,14 @@ export class DoggyApiService {
       .pipe(retry(1), catchError(this.handleError));
   }
 
+  getImages(breed: string, numberOfImages: Number = 4) {
+    return this.http
+      .get<JSON>(
+        `${this.apiURL}/breed/${breed}/images/random/${numberOfImages}`
+      )
+      .pipe(retry(1), catchError(this.handleError));
+  }
+
   handleError(error: {
     error: { message: string };
     status: any;

@@ -1,1 +1,7 @@
-<p>doggos works!</p>
+<h2>{{ breed | titlecase }}</h2>
+
+<div class="images">
+  <mat-card *ngFor="let image of images">
+    <img [src]="image.url" [alt]="image.alt" />
+  </mat-card>
+</div>
