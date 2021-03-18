@@ -12,14 +12,15 @@ import { MatInputModule } from '@angular/material/input';
 // import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 // Material Navigation
 // import { MatMenuModule } from '@angular/material/menu';
-// import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 // Material Layout
+import { LayoutModule } from '@angular/cdk/layout';
 import { MatCardModule } from '@angular/material/card';
 // import { MatDividerModule } from '@angular/material/divider';
 // import { MatExpansionModule } from '@angular/material/expansion';
 // import { MatGridListModule } from '@angular/material/grid-list';
-// import { MatListModule } from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 // import { MatStepperModule } from '@angular/material/stepper';
 // import { MatTabsModule } from '@angular/material/tabs';
 // import { MatTreeModule } from '@angular/material/tree';
@@ -28,7 +29,7 @@ import { MatButtonModule } from '@angular/material/button';
 // import { MatButtonToggleModule } from '@angular/material/button-toggle';
 // import { MatBadgeModule } from '@angular/material/badge';
 // import { MatChipsModule } from '@angular/material/chips';
-// import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 // import { MatProgressBarModule } from '@angular/material/progress-bar';
 // import { MatRippleModule } from '@angular/material/core';
@@ -56,13 +57,14 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     // MatSliderModule,
     // MatSlideToggleModule,
     // MatMenuModule,
-    // MatSidenavModule,
+    MatSidenavModule,
     MatToolbarModule,
+    LayoutModule,
     MatCardModule,
     // MatDividerModule,
     // MatExpansionModule,
     // MatGridListModule,
-    // MatListModule,
+    MatListModule,
     // MatStepperModule,
     // MatTabsModule,
     // MatTreeModule,
@@ -70,7 +72,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     // MatButtonToggleModule,
     // MatBadgeModule,
     // MatChipsModule,
-    // MatIconModule,
+    MatIconModule,
     MatProgressSpinnerModule,
     // MatProgressBarModule,
     // MatRippleModule,
@@ -93,13 +95,14 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     // MatSliderModule,
     // MatSlideToggleModule,
     // MatMenuModule,
-    // MatSidenavModule,
+    MatSidenavModule,
     MatToolbarModule,
+    LayoutModule,
     MatCardModule,
     // MatDividerModule,
     // MatExpansionModule,
     // MatGridListModule,
-    // MatListModule,
+    MatListModule,
     // MatStepperModule,
     // MatTabsModule,
     // MatTreeModule,
@@ -107,7 +110,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     // MatButtonToggleModule,
     // MatBadgeModule,
     // MatChipsModule,
-    // MatIconModule,
+    MatIconModule,
     MatProgressSpinnerModule,
     // MatProgressBarModule,
     // MatRippleModule,

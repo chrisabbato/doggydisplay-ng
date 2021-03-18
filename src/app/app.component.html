@@ -1,20 +1,7 @@
-<mat-toolbar color="primary">
-  <a routerLink="/">
-    <div class="title">
-      <h1>{{ title }}</h1>
+<app-nav>
+  <div class="content-wrapper">
+    <div class="content">
+      <router-outlet></router-outlet>
     </div>
-  </a>
-  <!-- <div fxFlex>
-    <button mat-raised-button>
-      <a routerLink="/">Home</a>
-    </button>
-    <button mat-raised-button>
-      <a routerLink="/doggos">Doggos</a>
-    </button>
-  </div> -->
-</mat-toolbar>
-<div class="content-wrapper">
-  <div class="content">
-    <router-outlet></router-outlet>
   </div>
-</div>
+</app-nav>

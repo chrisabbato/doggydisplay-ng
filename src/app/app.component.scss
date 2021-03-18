@@ -1,21 +1,3 @@
-mat-toolbar {
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
-  place-content: center space-between;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  outline: none;
-}
-
-.title {
-  height: 100%;
-  padding: 10px;
-}
-
 .content-wrapper {
   width: 100%;
   height: 100%;
