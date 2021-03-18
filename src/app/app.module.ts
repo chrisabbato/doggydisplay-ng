@@ -14,6 +14,7 @@ import { DisplayImagesHeaderComponent } from './components/display-images-header
 import { SearchInputComponent } from './core/search-input/search-input.component';
 import { NavComponent } from './core/nav/nav.component';
 import { ErrorComponent } from './core/error/error.component';
+import { FullScreenImageComponent } from './components/display-images/full-screen-image/full-screen-image.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ErrorComponent } from './core/error/error.component';
     SearchInputComponent,
     NavComponent,
     ErrorComponent,
+    FullScreenImageComponent,
   ],
   imports: [
     BrowserModule,
