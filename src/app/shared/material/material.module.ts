@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { A11yModule } from '@angular/cdk/a11y';
+
 // Material Form Controls
 // import { MatAutocompleteModule } from '@angular/material/autocomplete';
 // import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -47,6 +49,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   declarations: [],
   imports: [
     // CommonModule,
+    A11yModule,
     // MatAutocompleteModule,
     // MatCheckboxModule,
     // MatDatepickerModule,
@@ -85,6 +88,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     // MatTableModule,
   ],
   exports: [
+    A11yModule,
     // MatAutocompleteModule,
     // MatCheckboxModule,
     // MatDatepickerModule,
