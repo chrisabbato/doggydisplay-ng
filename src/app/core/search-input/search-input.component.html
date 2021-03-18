@@ -1,8 +1,8 @@
 <mat-form-field>
-  <mat-label>Choose a Breed</mat-label>
+  <mat-label>{{ label }}</mat-label>
   <input
     matInput
-    placeholder="Ex. Husky"
+    [placeholder]="placeholder"
     #searchValue
     (input)="search(searchValue.value)"
   />

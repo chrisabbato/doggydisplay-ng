@@ -1,4 +1,8 @@
-<app-search-input (searchEvent)="filterBreeds($event)"></app-search-input>
+<app-search-input
+  label="Choose a Breed"
+  placeholder="ex. husky"
+  (searchEvent)="filterBreeds($event)"
+></app-search-input>
 <div class="breed-search-results">
   <ng-container *ngIf="filteredBreeds$ | async as breeds; else indicator">
     <a
