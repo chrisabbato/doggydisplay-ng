@@ -11,12 +11,5 @@ import { map, shareReplay } from 'rxjs/operators';
 export class NavComponent {
   title = `${String.fromCodePoint(128021)} Doggy Display`;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe(Breakpoints.Handset)
-    .pipe(
-      map((result) => result.matches),
-      shareReplay()
-    );
-
   constructor(private breakpointObserver: BreakpointObserver) {}
 }
