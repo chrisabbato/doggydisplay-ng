@@ -1,8 +1,7 @@
-<mat-form-field cdkTrapFocusAutoCapture cdkTrapFocus>
+<mat-form-field>
   <mat-label>{{ label }}</mat-label>
   <input
     matInput
-    cdkFocusInitial
     [placeholder]="placeholder"
     #searchInput
     (input)="search(searchInput.value)"
