@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-display-images-header',
@@ -8,7 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DisplayImagesHeaderComponent implements OnInit {
   @Input() title: string = '';
 
-  constructor() {}
+  constructor(private location: Location) {}
 
   ngOnInit(): void {}
+
+  goBack() {
+    this.location.back();
+  }
 }
