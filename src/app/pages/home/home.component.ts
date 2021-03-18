@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { DoggyApiService } from '../../core/services/doggy-api.service';
+import { Observable, of, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { BreedsService } from 'src/app/core/services/breeds.service';
 
 @Component({
   selector: 'app-home',
@@ -9,27 +10,21 @@ import { DoggyApiService } from '../../core/services/doggy-api.service';
 })
 export class HomeComponent implements OnInit {
   title = 'Home';
-  breeds: string[] = [];
   filteredBreeds$: Observable<string[]> | undefined;
 
-  constructor(public doggyApi: DoggyApiService) {}
+  constructor(private breedsService: BreedsService) {}
 
   ngOnInit(): void {
-    this.LoadBreeds();
-  }
-
-  LoadBreeds() {
-    return this.doggyApi.getBreeds().subscribe((data) => {
-      this.breeds = Array.from(Object.keys((data as any).message));
-      this.filteredBreeds$ = of(this.breeds);
-    });
+    this.filteredBreeds$ = this.breedsService.getBreeds();
   }
 
   filterBreeds(searchValue: string) {
-    const filtered = this.breeds.filter((breed) =>
-      breed.toLowerCase().includes(searchValue.toLowerCase())
-    );
-
-    this.filteredBreeds$ = of(filtered);
+    this.breedsService.getBreeds().subscribe((data) => {
+      this.filteredBreeds$ = of(
+        data.filter((breed) =>
+          breed.toLowerCase().includes(searchValue.toLowerCase())
+        )
+      );
+    });
   }
 }

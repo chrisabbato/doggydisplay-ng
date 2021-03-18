@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { retry } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -12,33 +12,14 @@ export class DoggyApiService {
   constructor(private http: HttpClient) {}
 
   getBreeds(): Observable<JSON> {
-    return this.http
-      .get<JSON>(`${this.apiURL}/breeds/list/all`)
-      .pipe(retry(1), catchError(this.handleError));
+    return this.http.get<JSON>(`${this.apiURL}/breeds/list/all`).pipe(retry(1));
   }
 
-  getImages(breed: string, numberOfImages: Number = 4) {
+  getImages(breed: string, numberOfImages: Number = 4): Observable<JSON> {
     return this.http
       .get<JSON>(
         `${this.apiURL}/breed/${breed}/images/random/${numberOfImages}`
       )
-      .pipe(retry(1), catchError(this.handleError));
-  }
-
-  handleError(error: {
-    error: { message: string };
-    status: any;
-    message: any;
-  }) {
-    let errorMessage = '';
-    if (error.error instanceof ErrorEvent) {
-      // Get client-side error
-      errorMessage = error.error.message;
-    } else {
-      // Get server-side error
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
-    }
-    window.alert(errorMessage);
-    return throwError(errorMessage);
+      .pipe(retry(1));
   }
 }
