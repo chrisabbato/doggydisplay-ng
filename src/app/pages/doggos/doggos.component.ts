@@ -26,7 +26,7 @@ export class DoggosComponent implements OnInit {
   }
 
   LoadImages() {
-    return this.doggyApi.getImages(this.breed).subscribe((data) => {
+    return this.doggyApi.getImages(this.breed, 6).subscribe((data) => {
       const images = (data as any).message.map((image: URL, index: number) => {
         return {
           url: image,
