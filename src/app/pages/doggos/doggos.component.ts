@@ -21,9 +21,8 @@ export class DoggosComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.breed = params.get('breed') || '';
+      this.LoadImages();
     });
-
-    this.LoadImages();
   }
 
   LoadImages() {
