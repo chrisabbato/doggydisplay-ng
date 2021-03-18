@@ -15,9 +15,12 @@ export class BreedsService {
   }
 
   updateBreeds() {
-    return this.doggyApi.getBreeds().subscribe((data) => {
-      this._breeds$.next(Array.from(Object.keys((data as any).message)));
-    });
+    return this.doggyApi.getBreeds().subscribe(
+      (data) => {
+        this._breeds$.next(Array.from(Object.keys((data as any).message)));
+      },
+      (error) => this._breeds$.error(error)
+    );
   }
 
   getBreeds(): Observable<string[]> {

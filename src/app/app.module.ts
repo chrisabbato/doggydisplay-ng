@@ -13,6 +13,7 @@ import { DisplayImagesComponent } from './components/display-images/display-imag
 import { DisplayImagesHeaderComponent } from './components/display-images-header/display-images-header.component';
 import { SearchInputComponent } from './core/search-input/search-input.component';
 import { NavComponent } from './core/nav/nav.component';
+import { ErrorComponent } from './core/error/error.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NavComponent } from './core/nav/nav.component';
     DisplayImagesHeaderComponent,
     SearchInputComponent,
     NavComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,

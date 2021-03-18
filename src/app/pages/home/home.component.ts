@@ -9,22 +9,26 @@ import { BreedsService } from 'src/app/core/services/breeds.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  error = false;
   title = 'Home';
   filteredBreeds$: Observable<string[]> | undefined;
 
   constructor(private breedsService: BreedsService) {}
 
   ngOnInit(): void {
-    this.filteredBreeds$ = this.breedsService.getBreeds();
+    this.filterBreeds('');
   }
 
   filterBreeds(searchValue: string) {
-    this.breedsService.getBreeds().subscribe((data) => {
-      this.filteredBreeds$ = of(
-        data.filter((breed) =>
-          breed.toLowerCase().includes(searchValue.toLowerCase())
-        )
-      );
-    });
+    this.breedsService.getBreeds().subscribe(
+      (data) => {
+        this.filteredBreeds$ = of(
+          data.filter((breed) =>
+            breed.toLowerCase().includes(searchValue.toLowerCase())
+          )
+        );
+      },
+      (error) => (this.error = true)
+    );
   }
 }
