@@ -4,7 +4,7 @@ This project was created as a practice exercise to dip my feet in the Angular en
 
 ## Musings / Lessons Learned
 
-Angular Concepts: Templates and Directives, Routing, HTTPClient, Services for API fetching/data store, @Input/@Output for component parent child communication, Observing/Subscribing
+Angular Concepts: Templates (interpolation, statements, pipes, and bindings) and Directives (using them, didn't dive into building my own), Routing, HTTPClient, Services for API fetching/data store, @Input/@Output for component parent child communication, Observing/Subscribing
 
 I like the structure and constraints with Angular and the fact that much functionality is already built in. While there is flexibility abound in React, sometimes it can be overwhelming with just how many ways something can be done and it's hard to feel confident I'm doing something the right way.  
 
@@ -25,6 +25,8 @@ Mobile responsiveness is pretty good, but there is some jankyness in portrait mo
 I still lack a solid grasp of the component lifecycle and update process in Angular vs. React so I need to dive into that some more to understand the differences, especially when it comes to optimizing performance.
 
 Testing is another area of growth for me, and I absolutely see the value in it and am eager to expand and learn in this direction. It is like learning an entirely new ecosystem and paradigm and is something I will have to sit down intentionally and really dive into so that I can understand it fully.
+
+Continued immersion in the ecosystem will give me a better feel for best practices. I made an effort to follow all best practices/style guidelines I could find, but it is possible I am still trying to solve some problems in a React way instead of the Angular way.
 
 ## Closing thoughts
 
