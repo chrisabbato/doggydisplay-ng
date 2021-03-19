@@ -14,9 +14,7 @@ export class FullScreenImageComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: Image
   ) {}
 
-  ngOnInit(): void {
-    console.log(this.data);
-  }
+  ngOnInit(): void {}
 
   onNoClick(): void {
     this.dialogRef.close();

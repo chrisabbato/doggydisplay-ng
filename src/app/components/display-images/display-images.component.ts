@@ -17,7 +17,6 @@ export class DisplayImagesComponent implements OnInit {
   ngOnInit(): void {}
 
   openDialog(image: Image): void {
-    console.log(image);
     const dialogRef = this.dialog.open(FullScreenImageComponent, {
       data: { ...image },
     });
