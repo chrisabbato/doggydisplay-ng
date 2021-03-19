@@ -2,11 +2,15 @@
 
 This project was created as a practice exercise to dip my feet in the Angular environment. I was also able to practice with Typescript and Material. This project is a port from a similar React project I worked on, with some further improvements applied.
 
-## Lessons Learned
+## Musings / Lessons Learned
+
+Angular Concepts: Templates and Directives, Routing, HTTPClient, Services for API fetching/data store, @Input/@Output for component parent child communication, Observing/Subscribing
 
 I like the structure and constraints with Angular and the fact that much functionality is already built in. While there is flexibility abound in React, sometimes it can be overwhelming with just how many ways something can be done and it's hard to feel confident I'm doing something the right way.  
 
 The flip side of this is that it does tend to feel like a lot of boilerplate with Angular. Having 4 files for every component gave me pause when I thought of breaking a component down further. There was no hesitation in React in the same situation.
+
+Observe/subscribe will take some more time to get comfortable with - kind of feels like pointer logic from the old days, or like its an envelope to put stuff in and ship it off. I like the different types of options, like BehaviorSubject and being able to emit and subscribe to values in different ways.
 
 I found it pleasant to jump in with Material. I appreciate the consistent design philosophy and array of components and options. I did not have much need to step outside the bounds of the library for this project, so I cannot speak to the challenges of customizing to fit very specific needs.
 
