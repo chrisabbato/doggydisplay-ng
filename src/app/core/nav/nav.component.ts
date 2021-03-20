@@ -22,4 +22,7 @@ export class NavComponent {
 
     this.router.navigate([`doggos`, breed]);
   }
+  randomBreeds() {
+    this.router.navigate([`doggos`]);
+  }
 }

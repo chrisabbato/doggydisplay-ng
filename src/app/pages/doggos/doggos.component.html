@@ -1,4 +1,4 @@
-<app-display-images-header [title]="breed"></app-display-images-header>
+<app-display-images-header [title]="displayTitle"></app-display-images-header>
 <ng-container *ngIf="!error; else errorMessage">
   <app-display-images [images$]="images$"></app-display-images>
 </ng-container>

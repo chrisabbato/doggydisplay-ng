@@ -11,7 +11,8 @@ import { Image } from '../../shared/image.model';
   styleUrls: ['./doggos.component.scss'],
 })
 export class DoggosComponent implements OnInit {
-  breed: string = '';
+  breed?: string = '';
+  displayTitle: string = '';
   images$: Observable<Image[]> | undefined;
   error: boolean = false;
 
@@ -23,7 +24,8 @@ export class DoggosComponent implements OnInit {
   ngOnInit(): void {
     this.error = false;
     this.route.paramMap.subscribe((params) => {
-      this.breed = params.get('breed') || '';
+      this.breed = params.get('breed') || undefined;
+      this.displayTitle = this.breed ? this.breed : 'Assorted Breeds';
       this.LoadImages();
     });
   }

@@ -15,11 +15,10 @@ export class DoggyApiService {
     return this.http.get<JSON>(`${this.apiURL}/breeds/list/all`).pipe(retry(1));
   }
 
-  getImages(breed: string, numberOfImages: Number = 4): Observable<JSON> {
-    return this.http
-      .get<JSON>(
-        `${this.apiURL}/breed/${breed}/images/random/${numberOfImages}`
-      )
-      .pipe(retry(1));
+  getImages(breed?: string, numberOfImages: Number = 4): Observable<JSON> {
+    const url = breed
+      ? `${this.apiURL}/breed/${breed}/images/random/${numberOfImages}`
+      : `${this.apiURL}/breeds/image/random/${numberOfImages}`;
+    return this.http.get<JSON>(url).pipe(retry(1));
   }
 }

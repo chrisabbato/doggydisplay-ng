@@ -11,8 +11,11 @@
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item (click)="drawer.close()" routerLink="/">Home</a>
+      <a mat-list-item (click)="drawer.close(); randomBreeds()" target="_blank"
+        >Assorted Breeds</a
+      >
       <a mat-list-item (click)="drawer.close(); randomBreed()" target="_blank"
-        >Random</a
+        >Random Breed</a
       >
     </mat-nav-list>
   </mat-sidenav>
