@@ -11,7 +11,7 @@ app-search-input {
 .breed-search-results {
   display: grid;
   justify-content: center;
-  width: 80%;
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 130px));
+  width: 90%;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 120px));
   gap: 10px;
 }
