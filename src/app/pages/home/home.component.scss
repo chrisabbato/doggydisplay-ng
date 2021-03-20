@@ -9,8 +9,9 @@ app-search-input {
 }
 
 .breed-search-results {
-  display: flex;
+  display: grid;
   justify-content: center;
-  flex-flow: row wrap;
+  width: 80%;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 130px));
   gap: 10px;
 }
