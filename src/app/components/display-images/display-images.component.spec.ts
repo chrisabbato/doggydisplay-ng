@@ -1,6 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DisplayImagesComponent } from './display-images.component';
+import {
+  MatDialogModule,
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+} from '@angular/material/dialog';
 
 describe('DisplayImagesComponent', () => {
   let component: DisplayImagesComponent;
@@ -8,9 +13,20 @@ describe('DisplayImagesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DisplayImagesComponent ]
-    })
-    .compileComponents();
+      declarations: [DisplayImagesComponent],
+      imports: [MatDialogModule],
+
+      providers: [
+        {
+          provide: MatDialogRef,
+          useValue: {},
+        },
+        {
+          provide: MAT_DIALOG_DATA,
+          useValue: undefined,
+        },
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {

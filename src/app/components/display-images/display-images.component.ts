@@ -20,7 +20,5 @@ export class DisplayImagesComponent implements OnInit {
     const dialogRef = this.dialog.open(FullScreenImageComponent, {
       data: { ...image },
     });
-
-    dialogRef.afterClosed().subscribe((result) => {});
   }
 }
