@@ -17,8 +17,7 @@ export class DoggosComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private doggyApi: DoggyApiService,
-    private location: Location
+    private doggyApi: DoggyApiService
   ) {}
 
   ngOnInit(): void {
